@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean id="triangle" class="org.himanshu.spring.Triangle">
+	<property name="points">
+		<list>
+			<ref bean="zeroPoint"/>
+			<ref bean="firstPoint"/>
+			<ref bean="secondPoint"/>
+		</list>
+	</property>
+	<property name="map">
+		<map>
+			<entry key="himanshu" value="gusain"/>
+			<entry key="hello" value="world"/>
+			<entry key="new" value="world"/>
+		</map>
+	</property>
+	<property name="set">
+		<set>
+			<value>himanshu</value>
+			<value>gusain</value>
+		</set>
+	</property>
+	</bean>
+	
+	<bean id="zeroPoint" class="org.himanshu.spring.Point">
+		<property name="x" value="0"/>
+		<property name="y" value="0"/>
+	</bean>
+	
+	<bean id="firstPoint" class="org.himanshu.spring.Point">
+		<property name="x" value="-20"/>
+		<property name="y" value="0"/>
+	</bean>
+	<bean id="secondPoint" class="org.himanshu.spring.Point">
+		<property name="x" value="0"/>
+		<property name="y" value="20"/>
+	</bean>
+
+</beans>
